@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react'
 
 import './App.css'
 
-// import { startMirage } from './server-mock'
+import { startMirage } from './server-mock'
 import { Tree } from './pages/index'
 import { makeTreeArrayRegions } from './utils'
 import { RegionNode } from './types'
 
-// if (process.env.NODE_ENV === 'development') {
-//   startMirage()
-// }
+if (process.env.NODE_ENV === 'development') {
+  startMirage()
+}
 
 const App = () => {
   const [regions, setRegions] = useState<RegionNode[]>([])
