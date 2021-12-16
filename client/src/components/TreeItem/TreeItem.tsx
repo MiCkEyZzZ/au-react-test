@@ -3,6 +3,8 @@ import React, { memo, useState } from 'react'
 import { Tree } from '../../pages'
 import { RegionNode } from '../../types'
 
+import Arrow from '../../Icons/Arrow'
+
 import './TreeItem.css'
 
 interface ITreeItemProps {
@@ -26,6 +28,11 @@ const TreeItem = memo<ITreeItemProps>(function TreeItem({ tree }) {
             onClick={ (evt) => toggleOpen(evt) }
         >
             <div className='tree-node__label'>
+                { folder && folder ? (
+                    <span className='tree-node__label-img--up'>{ <Arrow /> }</span>
+                ) : (
+                    <span className='tree-node__label-img--down'>{ <Arrow /> }</span>
+                ) }
                 <p className='tree-node__label-txt'>{ tree.name }</p>
             </div>
             { tree.items != null && tree.items.length > 0 && folder && (
