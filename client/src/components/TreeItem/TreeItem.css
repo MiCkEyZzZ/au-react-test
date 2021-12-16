@@ -1,0 +1,46 @@
+.tree-node {
+    position: relative;
+    margin-left: -15px;
+    list-style: none;
+    padding: 0;
+    user-select: none;
+}
+
+.tree-node__label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    margin: 0;
+    padding: 3px 0 3px 0;
+    cursor: pointer;
+}
+
+.tree-node__label-img--down {
+    margin: 0 8px 2px 0;
+    padding: 0;
+    transform: rotate(0deg);
+}
+
+.tree-node__label-img--down svg {
+    position: relative;
+    top: -1px;
+    margin: 0;
+}
+
+.tree-node__label-img--up {
+    margin: 0 8px 2px 0;
+    padding: 0;
+    transform: rotate(180deg);
+}
+
+.tree-node__label-img--up svg {
+    position: relative;
+    top: -5px;
+    left: -0.5px;
+}
+
+.tree-node__label-txt {
+    margin: 0;
+    padding: 0;
+}
